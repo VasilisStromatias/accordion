@@ -4,8 +4,13 @@ import AccordionItem from "./AccordionItem";
 function Accordion({ data }) {
   return (
     <div className="accordion">
-      {data.map((element) => (
-        <AccordionItem title={element.title} text={element.text} />
+      {data.map((element, index) => (
+        <AccordionItem
+          key={index}
+          title={element.title}
+          text={element.text}
+          number={index}
+        />
       ))}
     </div>
   );
